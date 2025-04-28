@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processed Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Processed Results</h2>
+
+<ul style="list-style-type: none;">
+    {% for key, value in results.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+    {% endfor %}
+</ul>
+
+<!-- Add plot image below -->
+<img src="/static/plot.png" alt="Processed Plot" style="max-width:90%; margin-top:30px;">
+
+<br><br>
+
+<!-- Add Home Button -->
+<a href="upload.html" style="text-decoration:none;">
+    <button style="padding:10px 20px; font-size:16px;">Home</button>
+  </a>
+
+</body>
+</html>
+

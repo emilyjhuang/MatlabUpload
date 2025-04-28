@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h2>Upload Data File</h2>
+<form method="post" action="/process" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx" required><br>
+    <input type="text" name="plot_title" placeholder="Plot Title (optional)"><br>
+    <input type="text" name="x_label" placeholder="X-axis Label (optional)"><br>
+    <input type="text" name="y_label" placeholder="Y-axis Label (optional)"><br>
+    <button type="submit">Upload and Process</button>
+</form>
+</body>
+</html>
