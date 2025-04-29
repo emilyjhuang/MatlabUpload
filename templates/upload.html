@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<h2>Upload Data File</h2>
+<h3>Upload Double Side Sigma Data File</h3>
 <form method="post" action="/process" enctype="multipart/form-data">
     <input type="file" name="file" accept=".xlsx" required><br>
     <input type="text" name="plot_title" placeholder="Plot Title (optional)"><br>
@@ -13,5 +13,20 @@
     <input type="text" name="y_label" placeholder="Y-axis Label (optional)"><br>
     <button type="submit">Upload and Process</button>
 </form>
+<h3>Single Profile Mode</h3>
+<form method="post" action="/process_single" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xlsx" required><br>
+    <input type="text" name="plot_title" placeholder="Plot Title (optional)"><br>
+    <input type="text" name="x_label" placeholder="X-axis Label (optional)"><br>
+    <input type="text" name="y_label" placeholder="Y-axis Label (optional)"><br>
+    <button type="submit">Process Single Profile</button>
+</form>
+
+<h3>Multiple Profile Mode</h3>
+    <form method="post" action="/process_batch" enctype="multipart/form-data">
+        <input type="file" name="files" webkitdirectory directory multiple required>
+        <button type="submit">Process Folder</button>
+    </form>
+
 </body>
 </html>
